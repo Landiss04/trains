@@ -1,4 +1,4 @@
-# [PROJECT NAME] — Software Configuration Management Plan
+# Team 3 Track Overflow — Software Configuration Management Plan
 
 *Prepared in conformance with IEEE Std 828™-2005*
 
