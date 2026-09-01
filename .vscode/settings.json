@@ -10,5 +10,7 @@
             "column": 79,
             "color": "#ff0000"
         }
-    ]
+    ],
+
+    "editor.tabSize": 4
 }
