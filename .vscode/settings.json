@@ -1,0 +1,14 @@
+{
+    "editor.rulers": [
+        {  
+            // Comments line length guide
+            "column": 72,
+            "color": "#808080"
+        },
+        {
+            // Code line length guide
+            "column": 79,
+            "color": "#ff0000"
+        }
+    ]
+}
