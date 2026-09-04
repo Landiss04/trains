@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Track_Overflow_Schedule" company="Trains Group 3" webLink="http://" view-date="2026-09-04" view-index="0" gantt-divider-location="351" resource-divider-location="300" version="3.3.3322" locale="en_US">
+    <description><![CDATA[This is the Gannt Scheduling management for Team 3 (Track Overflow). ]]></description>
+    <view zooming-state="default:2" id="gantt-chart">
+        <field id="tpd15" name="Notes" width="20" order="-1"/>
+        <field id="tpd3" name="Name" width="200" order="0"/>
+        <field id="tpd4" name="Begin date" width="75" order="1"/>
+        <field id="tpd5" name="End date" width="75" order="2"/>
+        <option id="filter.completedTasks" value="false"/>
+        <option id="filter.dueTodayTasks" value="false"/>
+        <option id="filter.overdueTasks" value="false"/>
+        <option id="filter.inProgressTodayTasks" value="false"/>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Name" width="210" order="0"/>
+        <field id="1" name="Default role" width="86" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="0" uid="6500289e2ae540fda60bf1140b26b1ac" name="Gannt Initial Setup" meeting="false" start="2026-09-04" duration="1" complete="0" expand="true"/>
+    </tasks>
+    <resources/>
+    <allocations/>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+    <roles roleset-name="SoftwareDevelopment"/>
+</project>
