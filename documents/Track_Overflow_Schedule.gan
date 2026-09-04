@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?><project name="Track_Overflow_Schedule" company="Trains Group 3" webLink="http://" view-date="2026-09-04" view-index="0" gantt-divider-location="351" resource-divider-location="300" version="3.3.3322" locale="en_US">
     <description><![CDATA[This is the Gannt Scheduling management for Team 3 (Track Overflow). ]]></description>
     <view zooming-state="default:2" id="gantt-chart">
-        <field id="tpd15" name="Notes" width="20" order="-1"/>
         <field id="tpd3" name="Name" width="200" order="0"/>
         <field id="tpd4" name="Begin date" width="75" order="1"/>
         <field id="tpd5" name="End date" width="75" order="2"/>
+        <field id="tpd15" name="Notes" width="20" order="3"/>
         <option id="filter.completedTasks" value="false"/>
         <option id="filter.dueTodayTasks" value="false"/>
         <option id="filter.overdueTasks" value="false"/>
         <option id="filter.inProgressTodayTasks" value="false"/>
+        <option id="color.recent"><![CDATA[#33ff33]]></option>
     </view>
     <view id="resource-table">
         <field id="0" name="Name" width="210" order="0"/>
@@ -39,11 +40,11 @@
             <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
         </taskproperties>
         <task id="0" uid="6500289e2ae540fda60bf1140b26b1ac" name="Gannt Initial Setup" meeting="false" start="2026-09-04" duration="1" complete="0" expand="true"/>
+        <task id="1" uid="cdee7dab57d642b2bf6b42b173838ffb" name="UX Iteration 1" color="#33ff33" meeting="false" start="2026-09-11" duration="6" complete="0" expand="true"/>
     </tasks>
     <resources/>
     <allocations/>
     <vacations/>
     <previous/>
     <roles roleset-name="Default"/>
-    <roles roleset-name="SoftwareDevelopment"/>
 </project>
