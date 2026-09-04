@@ -65,15 +65,6 @@ The Train Controller's control law is derived as a discrete-time PI controller w
 Track Model owns simulating failures (broken rail, track circuit failure, power failure) that Track Controller must *detect*; Train Model owns simulating failures (engine, signal pickup, brake) that Train Controller must *monitor and act on*. The architecture diagram's "Murphy" actor injecting faults directly into Track Model/Train Model reinforces this split, but no interface is specified for how a simulated fault becomes an observable signal to the corresponding controller.
 - **Recommendation:** Define the fault-injection/fault-reporting interface as its own contract between each Model/Controller pair before implementation starts.
 
----
-
-## 4. Scope Gaps Created by Dropping MBO
-
-Removing the MBO Controller and MBO Scheduler doesn't just delete two modules — it removes functionality the other modules' requirements were written assuming would exist elsewhere. These need explicit decisions, not silent omission:
-
-1. **Train authority source changes.** The architecture diagram (slide 8) shows the *train side* getting "Suggested Speed, Authority" from MBO, while the Train Model requirement separately says train inputs include "authority (distance) from **Wayside Controller**." These two aren't actually contradictory (Wayside/Track Controller was always the fixed-block authority source) — but with MBO gone, **all** train authority must now come from the Track Controller via fixed block, not moving block. Moving-block-style continuous safe-stopping-distance authority is no longer possible. Confirm this fixed-block-only approach is acceptable for the demo, since it's a real capability reduction versus what the slides describe as the target architecture.
-2. **Scheduling logic has no owner.** The CTC Office requirements only say "Schedule trains, Route trains" in one bullet each. All of the *detailed* scheduling logic — hourly throughput input, user-specified start time, schedule validated against vital requirements, yard startup dispatch mode, 8.5-hour operator shifts, mandatory 30-minute break after 4 hours of driving, trains returning to yard for shift change — lived entirely in the now-deleted **MBO Scheduler** slide. **This is the single largest silent scope gap.** Either CTC Office needs to absorb this whole scheduling feature set, or the group needs to formally decide it's out of scope and document that decision (recommended, given the added complexity is substantial and orthogonal to the vital control problem the course is actually testing).
-3. **Train position reporting loses its consumer.** The diagram has trains sending vital position messages to MBO. Without MBO, decide whether trains still need to report position anywhere (e.g., to CTC Office for the "display current state of entire system" requirement) or whether track-circuit-based occupancy detection alone satisfies that display requirement.
 
 ---
 
